@@ -1,19 +1,24 @@
-# IoT-Security-Lab - WIP
+# IoT Security Lab
 
-> Status: 🚧 Work In Progress - Year 2 Student
+Build a small IoT device, look at what it sends over the network, then secure it.
 
-### What is this?
-My future SIC Samsung IoT project: ESP32 + DHT11 + MQTT.
-Plan: Build -> Hack myself -> Fix.
+**Status:** 🚧 Planning — buying parts in Nov 2026, first build planned for Dec 2026
 
-### What I have done
-- [x] Learned MQTT basics from TryHackMe
-- [ ] Buy ESP32
-- [ ] Build hardware
+## The device
 
-### What I will do (Security)
-- [ ] Capture MQTT with Wireshark
-- [ ] Find hardcoded WiFi password
-- [ ] Fix with TLS
+An ESP32 DevKit with an SHT31 temperature and humidity sensor and a 1.3-inch OLED screen. It sends its readings over MQTT to a broker on my laptop.
 
-*Updated: May 2026*
+## Plan
+
+1. **Build** — read the sensor, show the values on the OLED, publish them over MQTT
+2. **Observe** — capture the MQTT traffic in Wireshark and check what can be read in plain text
+3. **Review** — look for secrets stored in my own firmware, such as the Wi-Fi password or broker credentials
+4. **Secure** — MQTT over TLS, broker authentication, secrets moved out of the source code
+5. **Write up** — before and after captures, and what changed
+
+## Log
+
+| Date | What I did |
+|---|---|
+| May 2026 | Learned MQTT basics on TryHackMe |
+| Nov 2026 | Chose the parts: ESP32, SHT31, 1.3-inch OLED |
